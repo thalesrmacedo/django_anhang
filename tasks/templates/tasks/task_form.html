@@ -1,0 +1,10 @@
+{% extends 'tasks/base.html' %}
+
+{% block content %}
+<h2>Adicionar Tarefa</h2>
+<form method="post">
+  {% csrf_token %}
+  <input type="text" name="title" placeholder="Digite a tarefa" required>
+  <button type="submit">Salvar</button>
+</form>
+{% endblock %}
